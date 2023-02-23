@@ -1,0 +1,19 @@
+Create project : composer create-project laravel/laravel {Name of project}
+1- first we go to .env change name of database
+2- create DB in php my admin
+3- AppserviceProviderFile in boot()--> type Schema::defaultStringLength(191);
+4- php artisan migrate
+5-composer install (to use artisan command and packegs)
+6-To add column (address and phone number to users)
+use : php artisan make:migration {optional} --table=users
+
+7- To create Model and migration(m) and factory(f) and  ( controller,resource , Form Request ) (crR)
+    php artisan make:model {Name} -mfcrR
+
+8- after finishing from Migrtions Creation (php artisn migrate) to genertate tables in ur Database
+9- make Fillable columns in Models
+
+first we go to ProductController
+1- create product store()
+    go to Request form
+    check for rules validations (https://laravel.com/docs/10.x/validation#main-content)
