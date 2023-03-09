@@ -1,0 +1,56 @@
+Download PostMan
+download https://git-scm.com/download/win
+then 
+    git clone https://github.com/omaradel-tech/MSP-Azhar
+
+open project with IDE (VC)
+composer install
+then go to file .env and create Database name in php my admin
+php artisan migrate 
+
+to create migration 
+    command :   php artisan  make:migration  create_{Table_name}_table
+
+    command  to run migration file : php artisan migrate
+
+to create factory (This generate Random Data in your database)
+    php artisan make:factory {ModelName}Factory
+
+    to run the file go to DatabaseSeeder then
+
+    php artisan db:seed
+
+
+
+to make api authantication 
+        https://techsolutionstuff.com/post/rest-api-with-passport-authentication-in-laravel-9
+
+
+to create Controller 
+    command  php artisan make:controller {ModelName}Controller
+    command  php  
+
+
+
+to add new column in employees
+    php artisan make:migration add_salar_column --table=employees
+
+
+
+to create Model and migration(m) and factory(f) and Resource Controller(cr) and form request(R)
+        php artisan make:model Member -mfcrR
+
+
+resource Controller and routes Methods
+        https://laravel.com/docs/10.x/controllers
+
+
+
+
+Task 
+Create Migration , controller , model , route   (Table name Movies (name , des , price , publish_date, .......,actor) )
+1 - Generate Random Movies 
+2 - request To get All movies 
+3- request to create new movie 
+4- request to update old movie 
+5- {request to delete movie  }
