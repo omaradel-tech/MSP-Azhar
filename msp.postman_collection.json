@@ -1,0 +1,116 @@
+{
+	"info": {
+		"_postman_id": "609483e9-4080-4c44-b898-71ab545d9c37",
+		"name": "msp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19463281"
+	},
+	"item": [
+		{
+			"name": "RegisterRequest",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch Data",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNmU0NmRmYTJlNmFhNzIxMWYxNmQ0Nzc3OTI2ODFiNWQ4MjRlNmVlZjgxZmZkZjg2ZWMxNWZmYWFiNjQxYWE3Y2UyYWY1NWNjZjM1MWFiZDciLCJpYXQiOjE2NzgzODczODcuOTE5Mzg5LCJuYmYiOjE2NzgzODczODcuOTE5MzkyLCJleHAiOjE3MTAwMDk3ODcuOTE2MDIyLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kRvBgh59d1rRfDyPteXMyevPGmI9Pg6N__StwoEshIjgxNEc2EUNdMu2xDxF884d7gbxAAtRoUunv8DYUUk7IEHuWdFYQX4mZUYyAcqg05g36szjRBa1Wia73ENQNA_404rS4Da42s5ZGrnf9bWFXrAu0opdvkMuXiZ9VRynfzFQmJat9aGHV1dGKYNnzh0h_TVkAA3oCW1GRfQ2PZGEa2adeuMie4rg276Vkv9_wm62_Ua-lJs8dkk6xC3N1uKR8k97o8ICBGVuX2T65a-wDp4uEUJoAYadest1m2o8GAb3LrIqXjzDvT5x1A91USt8Ga9LL4i-mGoo_UV1bemWVN44iMjMKSL0PrhJturJ58RZZj-wUnGMQFhTislJNAN39U9IJmlvYIwxoF45oyKBrO_jpUBQ6oEWr4Tl3RszReOz_1rnzJQKRsMbdp6XQDXrr8SJteOk-5zVVffOBaSH3fdGBQzxyTLGAXa56DA8jk5xXAsUmcEujrJ4nZds4WmF5zza22C6cDkxwa-21l_vwXAkxeFx2-hQoAuPCVg_MTxybXH63LmJ4mgGnHXf8KO2Kd5WQ8N0xXmecHEgmQ0PGghfjMKA1wpkHSUksnaapLeNJMRUvDbUQtncj5FWwdvXPKY2tdi9cqDW3CEAPD3h-8ffYcdxekW_VHbQ9_fmEvw",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "id",
+						"value": "2",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "msp",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "test@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "natinational_id",
+							"value": "123456789123456789124",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "cairo",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "active",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/members",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LoginRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -17,7 +17,7 @@ class ProductController extends BaseController
     public function index()
     {
         //
-
+        return $this->sendResponse('Here','Data');
     }
 
     /**
@@ -28,6 +28,7 @@ class ProductController extends BaseController
     public function create()
     {
         //
+        return view('');
     }
 
     /**
@@ -46,12 +47,12 @@ class ProductController extends BaseController
                 'desc'=> $request->desc,
                 'price'=>$request->price
             ]);
-            $this->success('success');
+            return $this->sendResponse($product,'product has been added Successfully');
 
         }
         catch(Exception $e)
         {
-            $this->error($product);
+            return $this->sendError($e,'Some thins went wrong');
         }
 
     }

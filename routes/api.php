@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\RegisterController;
+use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,12 +18,29 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-Route::get('/test',function(){
-    return 'man';
-});
-Route::resource('products',ProductController::class);
-// Route::post('/product/store','App\Http\Controllers\ProductController@store');
 
-// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::group(['middleware'=>'auth:api'],function(){
+
+    Route::get('/test',function(){
+            $employees = Employee::all();  // To get All Employees
+
+            return $employees;
+    });
+
+    Route::resource('products',ProductController::class);
+
+    // Route::get('/employee',[EmployeeController::class,'get_employees']);
+
+    Route::get('/getEmployee',[EmployeeController::class,'get_employees']);
+
+    Route::post('/employee',[EmployeeController::class,'update']);
+});
+
+Route::post('register', [RegisterController::class, 'register']);
+Route::post('login', [RegisterController::class, 'login']);
+
+Route::resource('members',MemberController::class);
+
+
+
+

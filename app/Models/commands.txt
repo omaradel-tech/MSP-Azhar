@@ -1,3 +1,6 @@
+
+
+****************************
 Create project : composer create-project laravel/laravel {Name of project}
 1- first we go to .env change name of database
 2- create DB in php my admin
@@ -17,3 +20,11 @@ first we go to ProductController
 1- create product store()
     go to Request form
     check for rules validations (https://laravel.com/docs/10.x/validation#main-content)
+
+*****************************
+
+ - clone the repos
+  git clone https://github.com/omaradel-tech/MSP-Azhar.git
+
+
+
